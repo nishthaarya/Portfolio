@@ -12,7 +12,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
 }
 
 .name {
@@ -58,8 +58,7 @@
 }
 
 .aboutpage {
-    margin-top: 60vh;
-    min-height: 100vh;
+    margin-top: 70vh;
     background-color: black;
     color: white;
     font-size: 40px;
@@ -68,6 +67,20 @@
     display: flex;
     flex-direction: column;
 }
+
+
+.projects1 {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 90vh;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
 
 .about1page {
     margin-top: 100px;
@@ -174,7 +187,7 @@
     color: white;
     display: flex;
     flex-direction: column;
-    margin-top: 200px;
+    margin-top: 100px;
     font-size: 40px;
 }
 
@@ -183,32 +196,36 @@
     flex-direction: row;
     margin-left: auto;
     margin-right: auto;
-    font-family: monospace;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 50px 100px 20px 100px;
+}
+
+.cardleft {
+    width: 50%;
+    margin-top: 40px;
 }
 
 
 .cardleft > img {
-    width: 500px;
+    width: 100%;
     transition: 1s ease-out;
     cursor: pointer;
 }
 
 .cardright {
-    width: 60%;
+    width: 50%;
     padding: 20px;
     transition: 1s ease-out;
     cursor: pointer;
     margin-left: 30px;
-    border: .5px solid rgb(83, 250, 236);
     border-radius: 5px;
+    justify-content: center;
+    margin-left: 0px !important;
+    text-align: center;
 }
 
-.cardright:hover {
-    border: .5px solid rgb(250, 75, 250);
-}
 
 .heading {
-    text-align: left;
     font-size: 35px;
     padding: 20px 0px;
 }
@@ -217,16 +234,23 @@
     display: flex;
     flex-direction: row;
     font-size: 24px;
+    justify-content: center;
 }
 
 .extra > a {
     padding: 0px 20px 0px 0px;
     color: rgb(250, 75, 250);
     transition: .4s ease-out;
+    text-decoration: none;
+    border: 1px solid rgb(250, 75, 250);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0px 10px;
 }
 
 .extra > a:hover {
     color: rgb(83, 250, 236);
+    border: 1px solid rgb(83, 250, 236);
 }
 
 .details {
@@ -234,5 +258,81 @@
     flex-direction: column;
     font-size: large;
     padding: 20px 0px;
-    text-align: left;
+}
+
+.smallicons {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px;
+    justify-content: center;
+}
+
+.smallicons > img {
+    width: 35px;
+    border-radius: 50px;
+    margin: 5px 30px 5px 0px;
+}
+
+.newbtm {
+    display: flex;
+    flex-direction: row;
+    margin: 100px 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.newhead {
+    font-family: 'Major Mono Display', monospace !important;
+    color: rgb(83, 250, 236);
+}
+
+.newvice {
+    font-size: 30px;
+    padding: 20px 20px;
+}
+
+.newtext {
+    font-size: 25px;
+    padding: 10px 30px;
+}
+
+.newextra {
+    font-size: 20px;
+    margin: 50px 30px 0px 30px;
+    border: .5px solid rgb(250, 75, 250);
+    padding: 10px;
+}
+
+.circlespage {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.circletop {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.gol {
+    background-image: linear-gradient(120deg, rgb(250, 75, 250), rgb(83, 250, 236));
+    border-radius: 50%;
+    width: 20%;
+    height: 200px;
+    margin: 20px 40px;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gol > div {
+    background-color: black;
+    border-radius: 50%;
+    font-size: 32px;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    padding-top: 20%;
 }
