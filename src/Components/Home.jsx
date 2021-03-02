@@ -11,8 +11,15 @@ import expense from "./expense.png";
 import self from "./pic.png";
 import youtube from "./youtube.png";
 import github from "./github.png"
+import { useHistory } from "react-router-dom";
 
 export const Home = () => {
+
+    const history = useHistory()
+
+    const handleGame = () => {
+        history.push("/game")
+    }
 
     return(
         <>
@@ -58,6 +65,7 @@ export const Home = () => {
                 Frontend Web Developer.
             </motion.div>
             <motion.button
+            onClick = {handleGame}
                 className = {styles.btn}
                 initial = {{opacity: 0, y: 300}}
                 animate = {{opacity: 1, y: 300}}

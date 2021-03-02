@@ -1,0 +1,67 @@
+.full {
+    background-image: linear-gradient(80deg, rgb(250, 75, 250), rgb(83, 250, 236));
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: auto;
+}
+
+.heading {
+    text-align: center;
+    font-size: 40px;
+    padding: 100px 50px;
+    font-family: 'Major Mono Display', monospace !important;
+    font-weight: 900;
+}
+
+.game {
+    display: grid;
+    grid: 90px 90px 90px / 90px 90px 90px;
+    justify-content: center;
+    gap: 9px;
+}
+
+.game > div {
+    width: 90px;
+    height: 90px;
+    border: .5px solid grey;
+    border-radius: 5px;
+    cursor: cell;
+}
+
+.red {
+    background-color: red !important;
+    border: 1px solid blue;
+}
+
+.btm {
+    font-size: 30px;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    font-family: 'Major Mono Display', monospace !important;
+    font-weight: 700;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    justify-content: center;
+}
+
+.btns > button {
+    background-color: transparent;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid rgb(250, 75, 250);
+    border-radius: 5px;
+    font-size: 18px;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.btns > button:hover {
+    color: white;
+    border: 1px solid rgb(83, 250, 236);
+}
