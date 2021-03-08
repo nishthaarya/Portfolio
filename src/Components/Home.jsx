@@ -75,7 +75,7 @@ export const Home = () => {
             <Parallax speed = {1}>
             <motion.div 
                 className = {styles.navbar}
-                initial = {{y: -150}}
+                initial = {{y: -250}}
                 animate = {{y: 0}}
                 transition = {{delay: 3, duration: .5, type: "spring", stiffness: 50}}
             >
