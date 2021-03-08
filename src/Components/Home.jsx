@@ -3,7 +3,6 @@ import styles from "./Home.module.css";
 import Parallax from "react-rellax";
 import {motion} from "framer-motion";
 import Particles from 'react-particles-js';
-import ScrollAnimation from 'react-animate-on-scroll';
 import redux from "./redux.png";
 import cart from "./cart.png";
 import netflix from "./netflix.png";
@@ -12,6 +11,7 @@ import self from "./pic.png";
 import youtube from "./youtube.png";
 import github from "./github.png"
 import { useHistory } from "react-router-dom";
+import {Link} from "react-scroll";
 
 export const Home = () => {
 
@@ -24,57 +24,7 @@ export const Home = () => {
     return(
         <>
         <div className = {styles.full}>
-            <Parallax speed = {-6}>
-            <motion.div 
-                className = {styles.navbar}
-                initial = {{y: -150}}
-                animate = {{y: 0}}
-                transition = {{delay: 3, duration: .5, type: "spring", stiffness: 50}}
-            >
-                <div>
-                    About
-                </div>
-                <div>
-                    Projects
-                </div>
-                <div>
-                    Blogs
-                </div>
-                <div>
-                    Contact
-                </div>
-            </motion.div>
-            </Parallax>
-            <Parallax speed = {-4}>
-            <motion.div
-                className = {styles.name}
-                initial = {{y: -300}}
-                animate = {{y: 250}}
-                transition = {{delay: 1, duration: 1, type: "spring", stiffness: 100}}
-            >
-                Hi, I'm Nishtha Arya
-            </motion.div>
-            </Parallax>
-            <Parallax speed = {-4}>
-            <motion.div
-                className = {styles.name}
-                initial = {{y: -500}}
-                animate = {{y: 250}}
-                transition = {{delay: 2, duration: 1, type: "spring", stiffness: 100}}
-            >
-                Frontend Web Developer.
-            </motion.div>
-            <motion.button
-            onClick = {handleGame}
-                className = {styles.btn}
-                initial = {{opacity: 0, y: 300}}
-                animate = {{opacity: 1, y: 300}}
-                transition = {{delay: 4}}
-            >
-                Click to play a game
-            </motion.button>
-            </Parallax>
-            <Particles className = {styles.particles}
+        <Particles className = {styles.particles}
                 params={{
                     "particles": {
                         "number": {
@@ -121,8 +71,76 @@ export const Home = () => {
                 }}
             >
             </Particles>
+            
+            <Parallax speed = {1}>
+            <motion.div 
+                className = {styles.navbar}
+                initial = {{y: -150}}
+                animate = {{y: 0}}
+                transition = {{delay: 3, duration: .5, type: "spring", stiffness: 50}}
+            >
+                <div>
+                <Link activeClass="active" to="about" spy={true} smooth={true} duration = {400} >.About()</Link>
+                </div>
+                <div>
+                <Link activeClass="active" to="projects" spy={true} smooth={true} duration = {400} >.Projects()</Link>
+                </div>
+                <div>
+                <Link activeClass="active" to="skills" spy={true} smooth={true} duration = {400} >.Skills()</Link>
+                </div>
+                <div>
+                <Link activeClass="active" to="contact" spy={true} smooth={true} duration = {400} >.Contact()</Link>
+                </div>
+                <div onClick = {handleGame} className = {styles.navright}>
+                    Play a Game!
+                </div>
+            </motion.div>
+            </Parallax>
+            <Parallax speed = {1}>
+            <motion.div
+                className = {styles.name}
+                initial = {{y: -300}}
+                animate = {{y: 150}}
+                transition = {{delay: 1, duration: 1, type: "spring", stiffness: 100}}
+            >
+                Hi, I'm Nishtha Arya
+            </motion.div>
+            </Parallax>
+            <Parallax speed = {1}>
+            <motion.div
+                className = {styles.name}
+                initial = {{y: -500}}
+                animate = {{y: 180}}
+                transition = {{delay: 2, duration: 1, type: "spring", stiffness: 100}}
+            >
+                Frontend Web Developer.
+            </motion.div>
+            <motion.div
+                className = {styles.contactme}
+                initial = {{opacity: 0, y: 300}}
+                animate = {{opacity: 1, y: 300}}
+                transition = {{delay: 4}}
+            >
+                <div>
+                    <img alt = 'location' src = "https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_location_on_48px-512.png"/>
+                    <div>New Delhi, India</div>
+                </div>
+                <div>
+                    <img alt = 'phone' src = "https://cdn2.iconfinder.com/data/icons/font-awesome/1792/phone-512.png"/>
+                    <div>+91 7982259547</div>
+                </div>
+                <div>
+                    <img alt = 'email' src = "https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-email-512.png"/>
+                    <div>aryanishthaa@gmail.com</div>
+                </div>
+                <div>
+                    <img alt = 'resume' src = "https://static.thenounproject.com/png/202530-200.png"/>
+                    <div>View full resume</div>
+                </div>
+            </motion.div>
+            </Parallax>
         </div>
-        <Parallax speed = {5}>
+        <Parallax id = "skills" speed = {1}>
         <div className = {styles.aboutpage}>
                 <div className = {styles.tech}>Tech Stack</div>
                 <div className = {styles.abtbtm}>
@@ -157,7 +175,7 @@ export const Home = () => {
                 </div>
             </div>
         </Parallax>
-        <Parallax speed = {5}>
+        <Parallax id = "projects" speed = {1}>
             <div className = {styles.projects}>
                 <div className = {styles.tech}> Projects </div>
                 <div className = {styles.card}>
@@ -257,7 +275,7 @@ export const Home = () => {
                 </div>
             </div>
         </Parallax>
-        <Parallax speed = {5}>
+        <Parallax speed = {1}>
             <div className = {styles.projects1}>
                 <div className = {styles.circlespage}>
                     <div className = {styles.circletop}>
@@ -272,7 +290,8 @@ export const Home = () => {
                 </div>
             </div>
         </Parallax>
-        <Parallax speed = {5}>
+        <div id = "about" style = {{height: "0px", minWidth: "100vh",}}></div>
+        <Parallax speed = {.5}>
             <div className = {styles.projects}>
                 <div className = {styles.newbtm}>
                     <div className = {styles.newleft}>
@@ -296,6 +315,27 @@ export const Home = () => {
                 </div>    
             </div>
         </Parallax>
+        <div id = "contact" className = {styles.block}>
+            <div> Contact Me </div>
+            <div className = {styles.contactme}>
+                <div>
+                    <img alt = "github" src = "https://image.flaticon.com/icons/png/512/25/25231.png"/>
+                    <div>Github</div>
+                </div>
+                <div>
+                    <img alt = "linkedin" src = "https://image.flaticon.com/icons/png/512/61/61109.png"/>
+                    <div>LinkedIn</div>
+                </div>
+                <div>
+                    <img alt = "twitter" src = "https://image.flaticon.com/icons/png/512/23/23931.png"/>
+                    <div>Twitter</div>
+                </div>
+                <div>
+                    <img alt = "facebook" src = "https://i.pinimg.com/originals/b7/63/69/b763699fd1fa3bfb374442593ae642e1.png"/>
+                    <div>Facebook</div>
+                </div>
+            </div>
+        </div>
         </>
     )
 }
