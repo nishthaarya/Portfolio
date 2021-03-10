@@ -8,9 +8,9 @@ import cart from "./cart.gif";
 import expense from "./expense.gif";
 import self from "./pic.png";
 import youtube from "./youtube.gif";
-import github from "./github.png"
 import { useHistory } from "react-router-dom";
 import {Link} from "react-scroll";
+import github from "./github.png"
 
 export const Home = () => {
 
@@ -291,8 +291,8 @@ export const Home = () => {
                         <div className = {styles.gol}><div> 300+ Hackerrank problems </div></div>
                         <div className = {styles.gol}> <div>300+ {`  `} Git commits</div></div>
                     </div>
-                    <div className = {styles.circlebtm}>
-                        <img alt = "gitcommits" src = {github}/>
+                    <div >
+                       <img alt = "github commits" src = {github}/>
                     </div>
                 </div>
             </div>
@@ -327,7 +327,7 @@ export const Home = () => {
             <div className = {styles.contactme}>
                 <div>
                     <img alt = "github" src = "https://image.flaticon.com/icons/png/512/25/25231.png"/>
-                    <a href = "https://github.com/nishthaarya">Github</a>
+                    <a href = "https://www.linkedin.com/in/nishthaarya/">Github</a>
                 </div>
                 <div>
                     <img alt = "linkedin" src = "https://image.flaticon.com/icons/png/512/61/61109.png"/>
