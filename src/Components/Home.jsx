@@ -4,11 +4,10 @@ import Parallax from "react-rellax";
 import {motion} from "framer-motion";
 import Particles from 'react-particles-js';
 import redux from "./redux.png";
-import cart from "./cart.png";
-import netflix from "./netflix.png";
-import expense from "./expense.png";
+import cart from "./cart.gif";
+import expense from "./expense.gif";
 import self from "./pic.png";
-import youtube from "./youtube.png";
+import youtube from "./youtube.gif";
 import github from "./github.png"
 import { useHistory } from "react-router-dom";
 import {Link} from "react-scroll";
@@ -79,20 +78,28 @@ export const Home = () => {
                 animate = {{y: 0}}
                 transition = {{delay: 3, duration: .5, type: "spring", stiffness: 50}}
             >
-                <div>
-                <Link activeClass="active" to="about" spy={true} smooth={true} duration = {400} >.About()</Link>
-                </div>
-                <div>
-                <Link activeClass="active" to="projects" spy={true} smooth={true} duration = {400} >.Projects()</Link>
-                </div>
-                <div>
-                <Link activeClass="active" to="skills" spy={true} smooth={true} duration = {400} >.Skills()</Link>
-                </div>
-                <div>
-                <Link activeClass="active" to="contact" spy={true} smooth={true} duration = {400} >.Contact()</Link>
-                </div>
+                <Link color = "white" activeClass="active" to="about" spy={true} smooth={true} duration = {400} >
+                    <div>
+                    .About()
+                    </div>
+                </Link>
+                <Link activeClass="active" to="projects" spy={true} smooth={true} duration = {400} >
+                    <div>
+                    .Projects()
+                    </div>
+                </Link>
+                <Link activeClass="active" to="skills" spy={true} smooth={true} duration = {400} >
+                    <div>
+                    .Skills()
+                    </div>
+                </Link>
+                <Link activeClass="active" to="contact" spy={true} smooth={true} duration = {400} >
+                    <div>
+                    .Contact()
+                    </div>
+                </Link>
                 <div onClick = {handleGame} className = {styles.navright}>
-                    Play a Game!
+                    .PlayaGame()
                 </div>
             </motion.div>
             </Parallax>
@@ -180,7 +187,7 @@ export const Home = () => {
                 <div className = {styles.tech}> Projects </div>
                 <div className = {styles.card}>
                     <div className = {styles.cardleft}>
-                        <img alt = "netflix1" src = {netflix} />
+                        <img alt = "netflix1" src = 'https://github.com/lsriniwas/Netflix-Clone/raw/master/screenshots/first.gif' />
                         
                     </div>
                     <div className = {styles.cardright}>
@@ -224,7 +231,7 @@ export const Home = () => {
                         </div>
                         <div className = {styles.extra}>
                             <a href = "https://github.com/nishthaarya/E-Commerce-Website" className = {styles.github}>Github Repository</a>
-                            <a href = "https://github.com/nishthaarya/E-Commerce-Website" className = {styles.demo}> Demo Link </a>
+                            <a href = "https://laughing-stonebraker-4af261.netlify.app/" className = {styles.demo}> Demo Link </a>
                         </div>
                     </div>
                 </div>
@@ -269,7 +276,7 @@ export const Home = () => {
                         </div>
                         <div className = {styles.extra}>
                             <a href = "https://github.com/nishthaarya/youtube-clone-1" className = {styles.github}>Github Repository</a>
-                            <a href = "https://expensemanagerjs.netlify.app/login.html" className = {styles.demo}> Demo Link </a>
+                            <a href = "https://youtube-clone-rose.vercel.app/#/home" className = {styles.demo}> Demo Link </a>
                         </div>
                     </div>
                 </div>
@@ -320,22 +327,23 @@ export const Home = () => {
             <div className = {styles.contactme}>
                 <div>
                     <img alt = "github" src = "https://image.flaticon.com/icons/png/512/25/25231.png"/>
-                    <div>Github</div>
+                    <a href = "https://github.com/nishthaarya">Github</a>
                 </div>
                 <div>
                     <img alt = "linkedin" src = "https://image.flaticon.com/icons/png/512/61/61109.png"/>
-                    <div>LinkedIn</div>
+                    <a href = "https://www.linkedin.com/in/nishthaarya/" >LinkedIn</a>
                 </div>
                 <div>
                     <img alt = "twitter" src = "https://image.flaticon.com/icons/png/512/23/23931.png"/>
-                    <div>Twitter</div>
+                    <a href = "https://twitter.com/aryacodes" >Twitter</a>
                 </div>
                 <div>
                     <img alt = "facebook" src = "https://i.pinimg.com/originals/b7/63/69/b763699fd1fa3bfb374442593ae642e1.png"/>
-                    <div>Facebook</div>
+                    <a href = "https://www.facebook.com/nishtha.arya.71" >Facebook</a>
                 </div>
             </div>
         </div>
+        <div className = {styles.love}>Created with <span> ❤️ </span> by Nishtha Arya</div>
         </>
     )
 }
