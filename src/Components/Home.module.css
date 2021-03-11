@@ -1,8 +1,12 @@
+body {
+    width: fit-content;
+}
+
+
 .full {
     font-family: 'Major Mono Display', monospace !important;
     justify-content: center;
     text-align: center;
-    max-height: 3000px;
 }
 
 .particles {
@@ -10,10 +14,11 @@
     min-height: 100vh;
     position: fixed;
     right: 0;
-    right: 0;
+    right: 0; 
     bottom: 0;
     left: 0;
     z-index: -2;
+    width: 100%;
 }
 
 .name {
@@ -28,7 +33,7 @@
 }
 
 .navbar{
-    width: 100%;
+    min-width: 100vh;
     background-color: black;
     display: flex;
     flex-direction: row;
@@ -65,6 +70,8 @@
 
 .aboutpage {
     margin-top: 70vh;
+    min-height: 100vh;
+    min-width: 100vh;
     background-color: black;
     color: white;
     font-size: 40px;
@@ -80,6 +87,8 @@
     background-color: black;
     padding: 20px;
     text-align: center;
+    min-height: 100vh;
+    min-width: 100vh;
     color: white;
     display: flex;
     flex-direction: column;
@@ -193,6 +202,8 @@
     background-color: black;
     padding: 20px;
     text-align: center;
+    min-width: 100vh;
+    min-height: 100vh;
     color: white;
     display: flex;
     flex-direction: column;
@@ -403,6 +414,8 @@ a {
     font-weight: 700;
     padding: 20px 20px 0px 20px;
     margin-bottom: 0px !important;
+    min-height: 100vh;
+    min-width: 100vh;
 }
 
 .block > div {
@@ -418,6 +431,9 @@ a {
 }
 
 @media screen and (max-width: 930px) {
+
+
+
     .navbar {
         display: flex;
         flex-direction: column;
@@ -447,6 +463,7 @@ a {
     .projects {
         justify-content: center;
         align-items: center;
+        min-width: 100%;
     }
 
     .card {

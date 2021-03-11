@@ -142,7 +142,7 @@ export const Home = () => {
                 </div>
                 <div>
                     <img alt = 'resume' src = "https://static.thenounproject.com/png/202530-200.png"/>
-                    <div>View full resume</div>
+                    <a href = "https://drive.google.com/file/d/1HhC39n7rzjpRRvxFEd2zwfqX6dbBha6x/view?usp=sharing">View full resume</a>
                 </div>
             </motion.div>
             </Parallax>
