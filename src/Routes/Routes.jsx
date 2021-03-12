@@ -1,7 +1,7 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
-import { Game } from '../Components/Game/Game'
-import { Home } from '../Components/Home'
+import {Route} from "react-router-dom";
+import {Home} from "../Pages/Home/Home";
+import {Game} from "../Pages/Game/Game";
 
 export const Routes = () => {
     return (

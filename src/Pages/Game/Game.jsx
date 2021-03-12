@@ -4,8 +4,8 @@ import styles from "./Game.module.css";
 import {Cross} from "./cross"
 import { useHistory } from 'react-router-dom';
 
-export const Game = () => {
 
+export const Game = () => {
     const [positions, setPositions] = useState(new Array(9).fill(null))
     const [turn, setTurn] = useState("circle");
     const [winner, setWinner] = useState(undefined);
@@ -87,7 +87,9 @@ export const Game = () => {
 
 
     return (
-        <div className = {styles.full} >
+        <>
+        <div className = {styles.page} >
+            <div className = {styles.layer}>
             <div className = {styles.heading}>Tic Tac Toe</div>
             <div className = {styles.game}>
                 {divisions}
@@ -104,7 +106,9 @@ export const Game = () => {
                     
                 </div> }
             </div>
+            </div>
         </div>
+        </>
     )
 }
 

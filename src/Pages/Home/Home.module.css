@@ -1,0 +1,6 @@
+.particles {
+    background: linear-gradient(130deg, rgb(83, 250, 236),  rgb(250, 75, 250));
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+}

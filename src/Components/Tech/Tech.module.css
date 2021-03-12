@@ -1,0 +1,48 @@
+.skills {
+    min-height: 100vh;
+    background-color: black;
+    margin-top: 70vh;
+    width: 100%;
+    padding: 50px 100px 50px 50px;
+}
+
+.name {
+    font-family: 'Major Mono Display', monospace !important;
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bottom > div {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 20px;
+    padding: 20px;
+}
+
+img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.bottom > div > div {
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.img {
+    border-radius: 0px !important;
+}
